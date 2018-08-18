@@ -1,0 +1,22 @@
+# Package Files #ß
+*.war
+*.ear
+
+#idea files
+.idea/
+*.iml
+
+# gradle build
+.gradle
+build/
+
+# idea build
+/out/
+
+# generic build
+*.class
+classes/
+
+# execution result files
+hs_err_pid*
+*.log
