@@ -27,7 +27,7 @@ public class PrimitivesVsBoxedCpu {
     private static Set<Integer> boxedSetA = new HashSet<>(primitiveSetA);
     private static Set<Integer> boxedSetB = new HashSet<>(primitiveSetB);
 
-    //@Benchmark
+    @Benchmark
     @BenchmarkMode(Mode.AverageTime)
     @OutputTimeUnit(TimeUnit.MILLISECONDS)
     public Object measurePrimitiveSetConstruction() {
@@ -49,14 +49,14 @@ public class PrimitivesVsBoxedCpu {
         return set;
     }
 
-    //@Benchmark
+    @Benchmark
     @BenchmarkMode(Mode.AverageTime)
     @OutputTimeUnit(TimeUnit.MILLISECONDS)
     public Object measurePrimitiveSetReconstruction() {
         return new IntOpenHashSet(primitiveSetA);
     }
 
-    //@Benchmark
+    @Benchmark
     @BenchmarkMode(Mode.AverageTime)
     @OutputTimeUnit(TimeUnit.MILLISECONDS)
     public Object measureBoxedSetReconstruction() {
@@ -64,7 +64,7 @@ public class PrimitivesVsBoxedCpu {
     }
 
 
-    //@Benchmark
+    @Benchmark
     @BenchmarkMode(Mode.AverageTime)
     @OutputTimeUnit(TimeUnit.MILLISECONDS)
     public int measurePrimitiveSetIntersection() {
@@ -80,7 +80,7 @@ public class PrimitivesVsBoxedCpu {
     }
 
 
-    //@Benchmark
+    @Benchmark
     @BenchmarkMode(Mode.AverageTime)
     @OutputTimeUnit(TimeUnit.MILLISECONDS)
     public int measureBoxedSetIntersection() {

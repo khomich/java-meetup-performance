@@ -1,15 +1,6 @@
 package org.spdukraine.javameetup.performance;
 
-import gnu.trove.map.hash.TIntIntHashMap;
-import gnu.trove.set.hash.TIntHashSet;
 import it.unimi.dsi.fastutil.ints.*;
-import org.openjdk.jmh.annotations.Benchmark;
-import org.openjdk.jmh.annotations.BenchmarkMode;
-import org.openjdk.jmh.annotations.Mode;
-import org.openjdk.jmh.annotations.OutputTimeUnit;
-import org.openjdk.jmh.runner.Runner;
-import org.openjdk.jmh.runner.options.Options;
-import org.openjdk.jmh.runner.options.OptionsBuilder;
 import org.spdukraine.javameetup.performance.utils.Generators;
 import org.spdukraine.javameetup.performance.utils.MemoryBenchmark;
 
@@ -17,7 +8,6 @@ import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.*;
-import java.util.concurrent.TimeUnit;
 
 public class PrimitivesVsBoxedMemory {
     private static int SET_SIZE = 1_024 * 64;
