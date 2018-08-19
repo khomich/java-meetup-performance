@@ -17,6 +17,7 @@ public class PrimitivesVsBoxedMemory {
     private static IntSet primitiveSet = new IntOpenHashSet(DATA);
     private static Set<Integer> boxedSet = new HashSet<>(primitiveSet);
 
+    private static char[] TEST_1_CHAR = "1".toCharArray();
     private static char[] TEST_10_CHARS = "SPDUkraine".toCharArray();
     private static char[] TEST_MORE_CHARS = "The quick brown fox jumps over the lazy dog".toCharArray();
 
@@ -42,6 +43,7 @@ public class PrimitivesVsBoxedMemory {
 
         System.out.println("Testing strings...");
         benchmark.reportMeasure(() -> new String(""), "String()");
+        benchmark.reportMeasure(() -> new String(TEST_1_CHAR), "String(1)");
         benchmark.reportMeasure(() -> new String(TEST_10_CHARS), "String()", TEST_10_CHARS.length);
         benchmark.reportMeasure(() -> new String(TEST_MORE_CHARS), "String()", TEST_MORE_CHARS.length);
         System.out.println();
